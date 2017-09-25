@@ -1,6 +1,6 @@
 {
   "name": "sendable",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Describe sendable here",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -17,7 +17,8 @@
     "test:watch": "nwb test --server"
   },
   "dependencies": {
-    "request": "^2.82.0"
+    "request": "^2.82.0",
+    "request-promise-native": "^1.0.5"
   },
   "devDependencies": {
     "nwb": "0.18.x"
