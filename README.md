@@ -10,13 +10,15 @@ npm install sendable
 
 You can either use the environment variables, or configure the client manually.
 
-### Option 1) Environment Variable
+### Option 1 - Environment Variable
 
 Add the following environment variable to your application. You can get your API key from the project settings page of your Sendable dashboard.
 
 `SENDABLE_API_KEY`=`YOUR API KEY`
 
-### Option 2) Manual Configuration
+### Option 2 - Manual Configuration
+
+If you don't want to set an environment variable, use the following code:
 
 ```javascript
 const { Client } = require('sendable')
