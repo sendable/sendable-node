@@ -22,7 +22,7 @@ If you don't want to set an environment variable, use the following code:
 
 ```javascript
 const { Client } = require('sendable')
-const sendable = new Client(<SENDABLE_API_KEY>)
+const sendable = new Client('<SENDABLE_API_KEY>')
 ```
 
 # Usage
@@ -108,3 +108,5 @@ return Sendable.email(
   delivery: {}
 }
 ```
+
+The `delivery` key contains the response from your ESP.
