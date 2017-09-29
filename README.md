@@ -6,11 +6,11 @@
 npm install sendable
 ```
 
-## Setup
+# Setup
 
 You can either use the environment variables, or configure the client manually.
 
-### Environment Variables
+## Environment Variables
 
 Add the following environment variables to your application. You can get these values from the settings page of your Sendable dashboard.
 
@@ -18,7 +18,7 @@ Add the following environment variables to your application. You can get these v
 
 `SENDABLE_API_KEY`=`YOUR API KEY`
 
-### Manual Configuration
+## Manual Configuration
 
 ```javascript
 const { Client } = require('sendable')
@@ -29,9 +29,9 @@ const sendable = new Client(
 )
 ```
 
-## Usage
+# Usage
 
-### Render
+## Render
 
 The `render` method renders your email template and returns the HTML in response. It accepts two arguments and returns a `Promise` object.
 
@@ -49,10 +49,26 @@ return Sendable.render(
       age: 28
     },
   }
-)
+).then(result => {
+  // response goes here
+})
 ```
 
-### Email
+#### Render Response
+
+```javascript
+{
+  success: true,
+  email: {
+    html: "<html><head></head><body><h1>Sample HTML</h1></body></html>",
+    plain: "Sample Plain Text",
+    subject: "Sample Subject",
+    preheader: "Sample Preheader"
+  }
+}
+```
+
+## Email
 
 The `email` method renders your email template and returns the HTML in response. It accepts two arguments and returns a `Promise` object.
 
@@ -62,6 +78,7 @@ The `email` method renders your email template and returns the HTML in response.
   - **from** - *string* - This is the sender's email address
   - **assigns** - *object* - Any email data attributes that will be replaced in the `mustache` email template
 
+#### Email Request
 ```javascript
 const { Sendable } = require('sendable')
 
@@ -74,5 +91,22 @@ return Sendable.email(
       age: 28
     },
   }
-)
+).then(result => {
+  // response goes here
+})
+```
+
+#### Email Response
+
+```javascript
+{
+  success: true,
+  email: {
+    html: "<html><head></head><body><h1>Sample HTML</h1></body></html>",
+    plain: "Sample Plain Text",
+    subject: "Sample Subject",
+    preheader: "Sample Preheader"
+  },
+  delivery: {}
+}
 ```
