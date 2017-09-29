@@ -31,7 +31,7 @@ const sendable = new Client(
 
 # Usage
 
-## Render
+## Render Method
 
 The `render` method renders your email template and returns the HTML in response. It accepts two arguments and returns a `Promise` object.
 
@@ -70,9 +70,9 @@ return Sendable.render(
 }
 ```
 
-## Email
+## Email Method
 
-The `email` method renders your email template and returns the HTML in response. It accepts two arguments and returns a `Promise` object.
+The `email` method sends the email using your configured SMTP mailer in Sendable. It accepts two arguments and returns a `Promise` object.
 
 - **templateId** - *integer* - This is your Sendable template id
 - **params** - *object* - Object containing the following keys
