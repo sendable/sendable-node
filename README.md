@@ -43,7 +43,7 @@ The `render` method renders your email template and returns the HTML in response
 const { Sendable } = require('sendable')
 
 return Sendable.render(
-  templateId, {
+  123, {
     assigns: {
       firstName: "John",
       age: 28
@@ -66,7 +66,7 @@ The `email` method renders your email template and returns the HTML in response.
 const { Sendable } = require('sendable')
 
 return Sendable.email(
-  templateId, {
+  123, {
     from: 'me@awesome.com',
     to: 'john@doe.com',
     assigns: {
