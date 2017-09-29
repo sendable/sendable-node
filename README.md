@@ -39,6 +39,8 @@ The `render` method renders your email template and returns the HTML in response
 - **params** - *object* - Object containing the following keys
   - **assigns** - *object* - Any email data attributes that will be replaced in the mustache email template
 
+#### Render Request
+
 ```javascript
 const { Sendable } = require('sendable')
 
