@@ -33,7 +33,7 @@ The `render` method renders your email template and returns the HTML in response
 
 - **template** - *integer* - This is your Sendable email template id
 - **params** - *object* - Object containing the following keys
-  - **data** - *object* - Any email data attributes that will be replaced in the mustache email template
+  - **data** - *object* - Any email template data that will replace the email template variables
 
 #### Render Request
 
@@ -74,7 +74,7 @@ The `email` method sends the email using your configured SMTP mailer in Sendable
 - **params** - *object* - Object containing the following keys
   - **to** - *string* - This is the recipient's email address
   - **from** - *string* - This is the sender's email address
-  - **data** - *object* - Any email data attributes that will be replaced in the `mustache` email template
+  - **data** - *object* - Any email template data that will replace the email template variables
 
 #### Email Request
 ```javascript
